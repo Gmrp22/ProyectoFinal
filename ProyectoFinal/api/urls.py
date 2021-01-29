@@ -7,8 +7,11 @@ from api import viewsets
 
 router = DefaultRouter()
 router.register(r'user', viewsets.UserViewset)
-
-
+router.register(r'seller', viewsets.SellerViewSet)
+router.register(r'product', viewsets.ProductViewSet)
+router.register(r'sale', viewsets.SaleViewSet)
+router.register(r'purchase', viewsets.PurchaseViewSet)
+router.register(r'salereport', viewsets.SaleReport)
 urlpatterns = [
     path('api/', include(router.urls)),
     url(r"^api/token", obtain_auth_token, name="api-token"),
