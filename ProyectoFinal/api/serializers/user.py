@@ -38,3 +38,16 @@ class UserReadSerializer(serializers.ModelSerializer):
             'email',
             'profile',
         )
+
+
+class UserReportSerializer(serializers.ModelSerializer):
+    sales_total = serializers.FloatField(default=0)
+    avg_price = serializers.FloatField(default=0)
+
+    class Meta:
+        model = User
+        fields = (
+            'username',
+            'sales_total',
+            'avg_price',
+        )

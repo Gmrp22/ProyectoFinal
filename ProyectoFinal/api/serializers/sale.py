@@ -8,6 +8,8 @@ class SaleSerializer(serializers.ModelSerializer):
         fields = ['product', 'seller']
 
 class SaleReportSerializer(serializers.ModelSerializer):
+    total_sales = serializers.FloatField(default=0)
     class Meta:
         model = Sale
-        fields= ['product', 'seller']
+        fields= ['product', 'seller', 'total_sales']
+
