@@ -50,14 +50,27 @@ const setStep = (step) => ({
 // -----------------------------------
 // Actions
 // -----------------------------------
-
+const listar = (page = 1) => (dispatch) => {
+    dispatch(setLoader(true));
+    const params = { page };
+    api.get("purchase", params)
+        .then((response) => {
+            console.log(response)
+            dispatch(setData(response));
+            dispatch(setPage(page));
+        })
+        .catch(() => {})
+        .finally(() => {
+            dispatch(setLoader(false));
+        });
+};
 const detalle = (id) => (dispatch) => {
     dispatch(setLoader(true));
     
-    api.get(`product/${id}`)
+    api.get(`purchase/${id}`)
         .then((response) => {
 
-            dispatch(initializeForm("createProduct", response));
+            dispatch(initializeForm("purchaseproduct", response));
         })
         .catch((error) => {
             NotificationManager.error(error.detail, "ERROR", 0);
@@ -84,20 +97,7 @@ const onSubmit = () => (dispatch, getStore) => {
         });
 };
 
-const listar = (page = 1) => (dispatch) => {
-    dispatch(setLoader(true));
-    const params = { page };
-    api.get("purchase", params)
-        .then((response) => {
-            console.log(response)
-            dispatch(setData(response));
-            dispatch(setPage(page));
-        })
-        .catch(() => {})
-        .finally(() => {
-            dispatch(setLoader(false));
-        });
-};
+
 
 const actualizar = () => (dispatch, getStore) => {
     const { values } = getStore().form.createProduct;
