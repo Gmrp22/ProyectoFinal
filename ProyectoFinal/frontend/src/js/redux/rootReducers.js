@@ -7,7 +7,7 @@ import profile from './modules/cuenta/profile';
 import usuarios from './modules/usuarios/usuarios';
 import notificaciones from './modules/notificaciones/notificaciones';
 import seller from  './modules/seller/seller';
-
+import purchase from './modules/purchase/purchase';
 export default combineReducers({
     form: formReducer,
     login,
@@ -17,4 +17,5 @@ export default combineReducers({
     routing,
     notificaciones,
     seller,
+    purchase,
 });

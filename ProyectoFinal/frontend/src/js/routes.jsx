@@ -21,6 +21,7 @@ import Grids from "./common/components/Examples/Grids";
 import Notificaciones from './common/components/Examples/Notificaciones';
 import ExampleTabs from './common/components/Examples/Tabs/Tabs';
 import {ConnectionSeller} from './common/components/Seller/SellerContainer';
+import {ConnectionPurchase} from './common/components/Purchase/PurchaseContainer';
 require('../style/index.css');
 
 module.exports = (
@@ -41,6 +42,9 @@ module.exports = (
                 <ProtectedRoute exact path="/seller/products/:id/editar" component={ConnectionSeller.FormProduct} />
                 <ProtectedRoute exact path="/seller/myproducts" component={ConnectionSeller.SellerProducts} />
                 <ProtectedRoute exact path="/seller/mysoldproducts" component={ConnectionSeller.SoldProducts} />
+                {/* PURCHASE */}
+                <ProtectedRoute exact path="/purchase/mypurchase/create" component={ConnectionPurchase.Purchase} />
+                <ProtectedRoute exact path="/purchase/mypurchase/" component={ConnectionPurchase.AllPurchase} />
                 <Route component={NotFound} />
             </Switch>
         </div>

@@ -11,3 +11,4 @@ class PurchaseListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Purchase
         fields = [ 'product', 'buyer', 'nobuyer']
+        depth = 1

@@ -55,3 +55,8 @@ class PurchaseViewSet(viewsets.ModelViewSet):
                 return Response(contexto, status=status.HTTP_201_CREATED)
         except Exception as e:
           return Response({"detail": str(e)}, status= status.HTTP_400_BAD_REQUEST)
+    def list(self, request):
+        data = Purchase.objects.filter(buyer = request.user.id)
+        serializer = PurchaseListSerializer(data, many = True)
+        return Response({'results' : serializer.data})
+    
