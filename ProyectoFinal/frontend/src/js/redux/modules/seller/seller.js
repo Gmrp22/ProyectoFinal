@@ -67,6 +67,21 @@ const detalle = (id) => (dispatch) => {
         });
 };
 
+const detalleSale = (id) => (dispatch) => {
+    dispatch(setLoader(true));
+    
+    api.get(`sale/${id}`)
+        .then((response) => {
+
+            dispatch(initializeForm("saleproduct", response));
+        })
+        .catch((error) => {
+            NotificationManager.error(error.detail, "ERROR", 0);
+        })
+        .finally(() => {
+            dispatch(setLoader(false));
+        });
+};
 const onSubmit = () => (dispatch, getStore) => {
     const dataForm = getStore().form.createProduct.values;
     api.post("product", dataForm)
@@ -174,6 +189,7 @@ export const actions = {
     detalle,
     listar,
     listarsold,
+    detalleSale,
 };
 
 // -----------------------------------

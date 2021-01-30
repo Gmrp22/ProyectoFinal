@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 import { validate, validators } from "validate-redux-form";
 import { renderField } from "../Utils/renderField/renderField";
-const SaleForm = (props) => {
+const PurchaseForm = (props) => {
     const { handleSubmit, ver } = props;
     return (
         <div>
@@ -25,7 +25,7 @@ const SaleForm = (props) => {
                 />
          
       
-                <button type="button"><a href="#/seller/mysoldproducts">
+                <button type="button"><a href="#/purchase/mypurchase">
                     volver
                     </a></button>
             </form>
@@ -33,5 +33,5 @@ const SaleForm = (props) => {
     );
 };
 export default reduxForm({
-    form: "saleproduct", // a unique identifier for this form
-})(SaleForm);
+    form: "purchaseproduct", // a unique identifier for this form
+})(PurchaseForm);

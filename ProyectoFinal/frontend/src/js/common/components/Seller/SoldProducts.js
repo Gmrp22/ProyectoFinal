@@ -27,8 +27,7 @@ export default class SoldProducts extends Component {
                         dataAlign="center"
                         dataSort
                         dataFormat={standardActions({
-                            editar: "products",
-                            ver: "products",
+                            ver: "mysoldproducts",
                         })}
                     ></TableHeaderColumn>
                     <TableHeaderColumn
