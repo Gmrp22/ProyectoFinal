@@ -92,6 +92,16 @@ class SideBar extends Component {
                                 </NavLink>
                         </li>
                         <li className="nav-item">
+                        <NavLink to="/report" className="nav-link" activeClassName={'active'}>
+                                <div className="d-inline-block item-icon-wrapper">
+                                {auth ?<i className="material-icons">vertical_split</i>
+                                    : <i className="material-icons">lock</i>
+                                    }
+                                </div>
+                                <span>Reporte ventas</span>
+                                </NavLink>
+                        </li>
+                        <li className="nav-item">
                         <NavLink to="/purchase/mypurchase" className="nav-link" activeClassName={'active'}>
                                 <div className="d-inline-block item-icon-wrapper">
                                 {auth ?<i className="material-icons">vertical_split</i>

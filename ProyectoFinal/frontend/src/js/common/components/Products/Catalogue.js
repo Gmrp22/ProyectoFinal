@@ -18,8 +18,10 @@ export default class Catalogue extends Component {
                     loading={loader}
                     onPageChange={listar}
                     page={page}
-                    striped hover>
-                         <TableHeaderColumn
+                    striped
+                    hover
+                >
+                    <TableHeaderColumn
                         dataField="id"
                         dataAlign="center"
                         dataSort
@@ -27,16 +29,23 @@ export default class Catalogue extends Component {
                             ver: "catalogue",
                         })}
                     ></TableHeaderColumn>
-                      <TableHeaderColumn isKey dataField="name" dataSort>
+                    <TableHeaderColumn isKey dataField="name" dataSort>
                         Nombre Producto
                     </TableHeaderColumn>
-                    <TableHeaderColumn dataField="price" dataSort>
+                    <TableHeaderColumn
+                        dataField="price"
+                        dataSort
+                        dataFormat={(cell) => {
+                            if (cell) {
+                                return `Q${cell}`;
+                            }
+                        }}
+                    >
                         Precio Producto
                     </TableHeaderColumn>
                     <TableHeaderColumn dataField="description" dataSort>
                         Descripcion Producto
                     </TableHeaderColumn>
-
                 </Grid>
             </div>
         );

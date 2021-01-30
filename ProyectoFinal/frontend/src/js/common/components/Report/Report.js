@@ -1,22 +1,22 @@
 import React, { Component } from "react";
+import { render } from "react-dom";
+import ReportForm from "./ReportForm";
 import Grid from "../Utils/Grid";
 import { standardActions } from "../Utils/Grid/StandardActions";
-
-export default class SellerProducts extends Component {
+export default class Report extends Component {
     componentWillMount = () => {
         const { listar } = this.props;
         console.log(this.props.data);
         listar();
     };
-
     render() {
         const { data, loader, listar, page } = this.props;
         return (
             <div>
-                <h1>Mis productos</h1>
-                <button>
-                    <a href="/#/seller/products/create">Nuevo Producto</a>
-                </button>
+                <h1> REPORTE VENTAS </h1>
+
+                <ReportForm />
+
                 <Grid
                     data={data}
                     loading={loader}
@@ -25,15 +25,6 @@ export default class SellerProducts extends Component {
                     striped
                     hover
                 >
-                    <TableHeaderColumn
-                        dataField="id"
-                        dataAlign="center"
-                        dataSort
-                        dataFormat={standardActions({
-                            editar: "products",
-                            ver: "products",
-                        })}
-                    ></TableHeaderColumn>
                     <TableHeaderColumn isKey dataField="name" dataSort>
                         Nombre Producto
                     </TableHeaderColumn>
@@ -50,6 +41,9 @@ export default class SellerProducts extends Component {
                     </TableHeaderColumn>
                     <TableHeaderColumn dataField="description" dataSort>
                         Descripcion Producto
+                    </TableHeaderColumn>
+                    <TableHeaderColumn dataField="total_sales" dataSort>
+                        Total de ventas
                     </TableHeaderColumn>
                 </Grid>
             </div>

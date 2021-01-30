@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 import { validate, validators } from "validate-redux-form";
-import { renderField } from "../Utils/renderField/renderField";
+import { renderField, renderCurrency } from "../Utils/renderField/renderField";
 const ProductForm = (props) => {
     const { handleSubmit, ver } = props;
     return (
@@ -20,7 +20,7 @@ const ProductForm = (props) => {
                     name="price"
                     label="price"
                     type="number"
-                    component={renderField}
+                    component={renderCurrency}
                     disabled= {ver}
                 />
                 <label>Descripcion Producto</label>

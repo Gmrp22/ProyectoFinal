@@ -26,7 +26,7 @@ class SaleReport(viewsets.GenericViewSet):
         #Sale by product
         total_sales = Product.objects.annotate(
             total_sales= Count('product_sale__id')).filter(seller = self.request.user.id)
-
+        
 
         contexto = {'Report': UserReportSerializer(sales_total, many=True).data,
         'Product_Sales' : ProductSaleReportSerializer(total_sales, many=True).data, 
