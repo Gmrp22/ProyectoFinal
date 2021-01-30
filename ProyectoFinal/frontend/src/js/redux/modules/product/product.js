@@ -67,21 +67,6 @@ const detalle = (id) => (dispatch) => {
         });
 };
 
-const detalleSale = (id) => (dispatch) => {
-    dispatch(setLoader(true));
-    
-    api.get(`sale/${id}`)
-        .then((response) => {
-
-            dispatch(initializeForm("saleproduct", response));
-        })
-        .catch((error) => {
-            NotificationManager.error(error.detail, "ERROR", 0);
-        })
-        .finally(() => {
-            dispatch(setLoader(false));
-        });
-};
 const onSubmit = () => (dispatch, getStore) => {
     const dataForm = getStore().form.createProduct.values;
     api.post("product", dataForm)
@@ -102,7 +87,7 @@ const onSubmit = () => (dispatch, getStore) => {
 const listar = (page = 1) => (dispatch) => {
     dispatch(setLoader(true));
     const params = { page };
-    api.get("ownproducts", params)
+    api.get("product", params)
         .then((response) => {
             console.log(response)
             dispatch(setData(response));
@@ -113,20 +98,7 @@ const listar = (page = 1) => (dispatch) => {
             dispatch(setLoader(false));
         });
 };
-const listarsold = (page = 1) => (dispatch) => {
-    dispatch(setLoader(true));
-    const params = { page };
-    api.get("sale", params)
-        .then((response) => {
-            console.log(response)
-            dispatch(setData(response));
-            dispatch(setPage(page));
-        })
-        .catch(() => {})
-        .finally(() => {
-            dispatch(setLoader(false));
-        });
-};
+
 const actualizar = () => (dispatch, getStore) => {
     const { values } = getStore().form.createProduct;
 
@@ -188,8 +160,7 @@ export const actions = {
     actualizar,
     detalle,
     listar,
-    listarsold,
-    detalleSale,
+    
 };
 
 // -----------------------------------

@@ -9,33 +9,24 @@ const SaleForm = (props) => {
             <form onSubmit={handleSubmit}>
                 <label>Nombre Producto</label>
                 <Field
-                    name="name"
+                    name="product.name"
                     label="name"
                     type="text"
                     component={renderField}
-                    disabled= {ver}
+                    disabled= {true}
                 />
                 <label>Precio Producto</label>
                 <Field
-                    name="price"
+                    name="product.price"
                     label="price"
                     type="number"
                     component={renderField}
-                    disabled= {ver}
+                    disabled= {true}
                 />
-                <label>Descripcion Producto</label>
-                <Field
-                    name="description"
-                    label="description"
-                    type="text"
-                    component={renderField}
-                    disabled= {ver}
-                />
-                {ver?<div></div>
-                : 
-                <button >Guardar</button>}
-                <button type="button"><a href="#/seller/myproducts">
-                    Cancelar
+         
+      
+                <button type="button"><a href="#/seller/mysoldproducts">
+                    volver
                     </a></button>
             </form>
         </div>

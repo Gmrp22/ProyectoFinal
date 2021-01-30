@@ -25,8 +25,7 @@ export default class AllPurchase extends Component{
                         dataAlign="center"
                         dataSort
                         dataFormat={standardActions({
-                            editar: "products",
-                            ver: "products",
+                            ver: "mypurchase",
                         })}
                     ></TableHeaderColumn>
                     <TableHeaderColumn
