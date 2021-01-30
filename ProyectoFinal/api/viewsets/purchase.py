@@ -30,7 +30,7 @@ class PurchaseViewSet(viewsets.ModelViewSet):
     def create(self, request):
         try:
             data = request.data
-            product = Product.objects.get(pk=data.get('product'))
+            product = Product.objects.get(pk=data.get('id'))
             seller = product.seller
             if (seller == self.request.user):
                 contexto = {'Error': 'Usted es el dueño de este producto'}

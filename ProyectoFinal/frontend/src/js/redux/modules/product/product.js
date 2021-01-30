@@ -57,7 +57,7 @@ const detalle = (id) => (dispatch) => {
     api.get(`product/${id}`)
         .then((response) => {
 
-            dispatch(initializeForm("createProduct", response));
+            dispatch(initializeForm("createPurchase", response));
         })
         .catch((error) => {
             NotificationManager.error(error.detail, "ERROR", 0);
@@ -68,15 +68,16 @@ const detalle = (id) => (dispatch) => {
 };
 
 const onSubmit = () => (dispatch, getStore) => {
-    const dataForm = getStore().form.createProduct.values;
-    api.post("product", dataForm)
+    const dataForm = getStore().form.createPurchase.values;
+    console.log(dataForm)
+    api.post("purchase", dataForm)
         .then((response) => {
             NotificationManager.success(
-                "Producto registrado correctamente",
+                "Compra realizada correctamente",
                 "Éxito",
                 1000
             );
-            dispatch(push("/seller/myproducts"));
+            dispatch(push("/product/catalogue"));
         })
         .catch(() => {
             NotificationManager.error("Error de creacion", "ERROR", 3000);
@@ -87,7 +88,7 @@ const onSubmit = () => (dispatch, getStore) => {
 const listar = (page = 1) => (dispatch) => {
     dispatch(setLoader(true));
     const params = { page };
-    api.get("product", params)
+    api.get("catalogue", params)
         .then((response) => {
             console.log(response)
             dispatch(setData(response));
@@ -136,23 +137,6 @@ const actualizar = () => (dispatch, getStore) => {
 const searchChange = (search) => (dispatch) => {
     dispatch(setSearch(search));
     dispatch(listar());
-};
-
-const getTipoProyecto = () => (dispatch) => {
-    let tipoProyecto = [];
-
-    return api
-        .get("type_project")
-        .then((response) => {
-            tipoProyecto = response.results.map((proyecto) => ({
-                value: proyecto.id,
-                label: proyecto.name_project,
-            }));
-            return tipoProyecto;
-        })
-        .catch((err) => {
-            return tipoProyecto;
-        });
 };
 
 export const actions = {
