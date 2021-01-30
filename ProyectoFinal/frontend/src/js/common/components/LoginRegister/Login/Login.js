@@ -33,6 +33,10 @@ class Login extends Component {
                             <LoginForm onSubmit={onSubmit} />
                             <span>¿No tienes cuenta?&nbsp;<Link to="/registro">Registrate aquí</Link></span>
                         </LoadMask>
+                        <LoadMask loading={loader} light>
+                            <LoginForm onSubmit={onSubmit} />
+                            <span>¿Deseas comprar sin cuenta?&nbsp;<Link to="/product/catalogue">Compra</Link></span>
+                        </LoadMask>
                     </div>
                 </div>
             </div>
