@@ -47,7 +47,7 @@ export default class SoldProducts extends Component {
                         dataSort
                         dataFormat={(cell) => {
                             if (cell) {
-                                return cell.price;
+                                return `Q${cell.price}`;
                             }
                         }}
                     >

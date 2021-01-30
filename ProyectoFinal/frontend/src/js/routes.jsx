@@ -23,6 +23,7 @@ import ExampleTabs from './common/components/Examples/Tabs/Tabs';
 import {ConnectionSeller} from './common/components/Seller/SellerContainer';
 import {ConnectionPurchase} from './common/components/Purchase/PurchaseContainer';
 import {ConnectionProduct} from './common/components/Products/ProductContainer';
+import {ConnectionReport} from './common/components/Report/ReportContainer';
 require('../style/index.css');
 
 module.exports = (
@@ -50,6 +51,9 @@ module.exports = (
                 {/* PRODUCT */}
                 <ProtectedRoute exact path="/product/catalogue" component={ConnectionProduct.Catalogue} />
                 <ProtectedRoute exact path="/product/catalogue/:id/" component={ConnectionProduct.Product} />
+                {/* REPORT */}
+                <ProtectedRoute exact path="/report" component={ConnectionReport.Report} />
+                <ProtectedRoute exact path="/report/:id/" component={ConnectionReport.Report} />
                 <Route component={NotFound} />
             </Switch>
         </div>
