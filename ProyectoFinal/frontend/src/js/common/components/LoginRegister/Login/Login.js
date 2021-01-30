@@ -22,21 +22,20 @@ class Login extends Component {
         return (
             <div className="blue-gradient-bg">
                 <div className="d-flex flex-column align-items-center pt-3 bienvenida">
-                    <h1 className="text-center">Bienvenido a CianStarter</h1>
-                    <p>Página de login</p>
+                    <h1 className="text-center">Bienvenido a Compras De Producto</h1>
+                   
                 </div>
                 <br />
                 <div className="login-wrapper">
                     <div className="card card-login col-lg-3 col-md-4 col-11">
-                        <h5 className="text-center pv">INGRESAR</h5>
+                        <h5 className="text-center pv">Log In</h5>
                         <LoadMask loading={loader} light>
                             <LoginForm onSubmit={onSubmit} />
                             <span>¿No tienes cuenta?&nbsp;<Link to="/registro">Registrate aquí</Link></span>
-                        </LoadMask>
-                        <LoadMask loading={loader} light>
-                            <LoginForm onSubmit={onSubmit} />
+                            <br></br>
                             <span>¿Deseas comprar sin cuenta?&nbsp;<Link to="/product/catalogue">Compra</Link></span>
                         </LoadMask>
+
                     </div>
                 </div>
             </div>
