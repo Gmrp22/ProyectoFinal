@@ -4,3 +4,4 @@ from .purchase import PurchaseViewSet
 from .product import ProductViewSet
 from .sale import SaleViewSet
 from .salereport import SaleReport
+from .ownproducts import OwnProducts

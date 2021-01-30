@@ -5,7 +5,8 @@ from rest_framework.response import Response
 from api.models.sale import Sale
 # Serializer
 from api.serializers.sale import SaleSerializer
-
+#Permiso
+from api.authentication.sale import IsOwner
 class SaleViewSet(viewsets.ModelViewSet):
     queryset = Sale.objects.all()
     def get_serializer_class(self):
@@ -19,5 +20,11 @@ class SaleViewSet(viewsets.ModelViewSet):
         if self.action == "create":
             permission_classes = [IsAuthenticated]
         else:
-            permission_classes = [IsAuthenticated]
+            permission_classes = [IsAuthenticated, IsOwner]
         return [permission() for permission in permission_classes]
+
+    def list(self, request):
+        data = Sale.objects.filter(seller = request.user.id)
+        serializer = SaleSerializer(data, many = True)
+        return Response({'results' : serializer.data})
+    

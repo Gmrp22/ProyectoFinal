@@ -20,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Grids from "./common/components/Examples/Grids";
 import Notificaciones from './common/components/Examples/Notificaciones';
 import ExampleTabs from './common/components/Examples/Tabs/Tabs';
+import {ConnectionSeller} from './common/components/Seller/SellerContainer';
 require('../style/index.css');
 
 module.exports = (
@@ -34,6 +35,12 @@ module.exports = (
                 <ProtectedRoute exact path="/grids" component={Grids} />
                 <ProtectedRoute exact path="/notifications" component={Notificaciones} />
                 <ProtectedRoute exact path="/tabs" component={ExampleTabs} />
+                {/* SELLER */}
+                <ProtectedRoute exact path="/seller/products/create" component={ConnectionSeller.FormProduct} />
+                <ProtectedRoute exact path="/seller/products/:id/" component={ConnectionSeller.FormProduct} />
+                <ProtectedRoute exact path="/seller/products/:id/editar" component={ConnectionSeller.FormProduct} />
+                <ProtectedRoute exact path="/seller/myproducts" component={ConnectionSeller.SellerProducts} />
+                <ProtectedRoute exact path="/seller/mysoldproducts" component={ConnectionSeller.SoldProducts} />
                 <Route component={NotFound} />
             </Switch>
         </div>

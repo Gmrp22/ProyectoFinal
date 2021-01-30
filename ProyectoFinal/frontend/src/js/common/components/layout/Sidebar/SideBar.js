@@ -69,6 +69,23 @@ class SideBar extends Component {
                                 <span>Tabs</span>
                             </NavLink>
                         </li>
+
+                        <li className="nav-item">
+                        <NavLink to="/seller/myproducts" className="nav-link" activeClassName={'active'}>
+                                <div className="d-inline-block item-icon-wrapper">
+                                    <i className="material-icons">lock</i>
+                                </div>
+                                <span>Mis productos</span>
+                                </NavLink>
+                        </li>
+                        <li className="nav-item">
+                        <NavLink to="/seller/mysoldproducts" className="nav-link" activeClassName={'active'}>
+                                <div className="d-inline-block item-icon-wrapper">
+                                    <i className="material-icons">lock</i>
+                                </div>
+                                <span>Mis ventas</span>
+                                </NavLink>
+                        </li>
                         <li className="nav-item">
                             <Link to="/login" onClick={logOut} className="nav-link">
                                 <div className="d-inline-block item-icon-wrapper">

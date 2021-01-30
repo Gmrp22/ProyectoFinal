@@ -5,7 +5,8 @@ from api.models.sale import Sale
 class SaleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sale
-        fields = ['product', 'seller']
+        fields = ['product', 'seller', 'id']
+        depth = 1
 
 class SaleReportSerializer(serializers.ModelSerializer):
     total_sales = serializers.FloatField(default=0)
