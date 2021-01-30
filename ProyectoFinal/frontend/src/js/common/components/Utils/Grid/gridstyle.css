@@ -1,0 +1,21 @@
+.grid-table-head thead tr th {
+    text-align: center !important;
+    color: #227093;
+    text-transform: uppercase;
+    padding-top: 10px;
+    border: none;
+    padding-bottom: 10px;
+    background-color: white;
+}
+.table tbody {
+    background-color: #6b6b896e;
+    color: white;
+}
+.table tbody tr:hover > td:first-child {
+    filter: invert(7%) sepia(50%) saturate(8%) hue-rotate(100deg)
+        brightness(1000%) contrast(100%);
+}
+
+.table tbody tr:hover > td {
+    color: yellow;
+}

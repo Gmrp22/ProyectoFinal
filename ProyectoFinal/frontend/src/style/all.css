@@ -2842,6 +2842,7 @@ height: 50px;
     color:#1d2671;
     text-align: center;;
 }
+
 @media screen and (max-width: 993px) {
     .form-general-bsave {
         width: 70%;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BootstrapTable } from 'react-bootstrap-table';
 import LoadMask from "../LoadMask/LoadMask";
-
+import './gridstyle.css';
 
 export default class Grid extends Component {
     static propTypes = {
@@ -63,6 +63,7 @@ export default class Grid extends Component {
                         fetchInfo={{ dataTotalSize: data.count }}
                         options={options}
                         {...other}
+                        tableHeaderClass="grid-table-head"
                     />
                 </LoadMask>
             </div>
