@@ -37,7 +37,7 @@ class SideBar extends Component {
                                 <span>Home</span>
                             </NavLink>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <NavLink to="/page2" className="nav-link" activeClassName={'active'}>
                                 <div className="d-inline-block item-icon-wrapper">
                                     <i className="material-icons">vertical_split</i>
@@ -68,7 +68,7 @@ class SideBar extends Component {
                                 </div>
                                 <span>Tabs</span>
                             </NavLink>
-                        </li> */}
+                        </li>
 
                         <li className="nav-item">
                         <NavLink to="/seller/myproducts" className="nav-link" activeClassName={'active'}>

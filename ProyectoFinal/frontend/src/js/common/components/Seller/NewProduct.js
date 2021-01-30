@@ -15,13 +15,17 @@ export default class NewProduct extends Component {
         const isActualizar = (match.params.id) ? true : false
         return (
             <div>
-                <h4>
+                {/* <h4>
                    { (isActualizar)
                     ? (location.pathname.includes('ver')) ? 'Ver Producto' : 'Actualizar Producto'
                     : 'Nuevo producto'}
-                    </h4>
+                    </h4> */}
                 <FormProduct onSubmit={fn}
-                ver={location.pathname.includes('ver') && true}
+                isActualizar= {isActualizar}
+                location ={location}
+                ver={location.pathname.includes('ver') && true
+                    
+            }
                 />
             </div>
         );

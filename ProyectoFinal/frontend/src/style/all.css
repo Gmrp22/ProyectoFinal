@@ -2765,7 +2765,95 @@ pre code {
 .table-responsive > .table-bordered {
     border: 0
 }
+/* ------------------------------------------------------------------------------------------------------ */
+.form-general{
+    background-color: rgb(255,255,255);
+    border: 5px solid rgb(185 152 197);
+    border-style: outset;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
 
+.form-general-div{
+    margin: 50px;
+}
+.form-general-buttons{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.form-general-cancel{
+display: inline;
+margin-left: 20%;
+height: 50px;
+}
+.form-general-save{
+    display:inline;
+    margin-left: 20%;
+    height: 50px;
+}
+.div-princiapal{
+    background: #007bff;
+    background: linear-gradient(to right, #c33764,#1d2671);
+    height: 900px;
+}
+
+.form-general-bsave {
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    border: 1px solid transparent;
+    padding: .5625rem 1rem;
+    font-size: .75rem;
+    line-height: 1.125;
+    border-radius: .25rem;
+    -webkit-transition: all .25s cubic-bezier(.27, .01, .38, 1.06);
+    transition: all .25s cubic-bezier(.27, .01, .38, 1.06);
+    color: #17a2b8;
+    border-color: #17a2b8;
+    background-color: white;
+}
+
+.form-general-bsave.hover, .form-general-bsave:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.form-general-bsave.focus, .form-general-bsave:focus {
+    box-shadow: none;
+}
+.form-general-bsave a {
+    text-decoration: none;
+    color: #17a2b8;
+}
+.form-general-bsave a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.form-general-bsave:hover a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form-title h4{
+    color:#1d2671;
+    text-align: center;;
+}
+@media screen and (max-width: 993px) {
+    .form-general-bsave {
+        width: 70%;
+        display: block;
+        margin-left: 40px;
+    }
+    .form-general-buttons{
+        margin-top:50px
+    }
+
+}
+/* ------------------------------------------------------------------------------------------------------ */
 .form-control {
     display: block;
     width: 100%;

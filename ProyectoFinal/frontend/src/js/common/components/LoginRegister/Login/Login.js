@@ -22,7 +22,7 @@ class Login extends Component {
         return (
             <div className="blue-gradient-bg">
                 <div className="d-flex flex-column align-items-center pt-3 bienvenida">
-                    <h1 className="text-center">Bienvenido a Compras De Producto</h1>
+                    <h1 className="text-center">Bienvenido A Compras De Producto</h1>
                    
                 </div>
                 <br />
