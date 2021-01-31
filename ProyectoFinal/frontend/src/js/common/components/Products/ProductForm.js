@@ -7,7 +7,7 @@ const ProductForm = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit} className="form-general">
-              <div className="form-title"> <h4>Informacion Producto</h4></div>
+              <div className="form-title"> <h4>Compra Producto</h4></div>
                 <div className="form-general-div">
                     <label className="form-label">Nombre Producto</label>
                     <Field
@@ -45,7 +45,7 @@ const ProductForm = (props) => {
                         </button>
                     </div>
                     <div className="form-general-save">
-                        <button className="form-general-bsave ">Guardar</button>
+                        <button className="form-general-bsave ">Comprar</button>
                     </div>
                 </div>
             </form>
