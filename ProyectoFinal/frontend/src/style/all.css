@@ -2814,6 +2814,37 @@ height: 50px;
     border-color: #17a2b8;
     background-color: white;
 }
+.new_product{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    border: 1px solid transparent;
+    padding: .5625rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.125;
+    border-radius: .25rem;
+    -webkit-transition: all .25s cubic-bezier(.27, .01, .38, 1.06);
+    transition: all .25s cubic-bezier(.27, .01, .38, 1.06);
+    margin-left: 35%;
+    margin-top:10%;
+    width: 300px;
+    color: #0014ff;
+    border-color: rgb(208 0 133 / 1);
+    background-color: #374e7d33;
+}
+.new_product a {
+    text-decoration: none;
+    color: #ffb400;
+}
+.new_product a:hover {
+    text-decoration: none;
+    color: white;  
+}
+.new_product:hover{
+    background-color: #ffb400;
+    color: white;
+}
+.new_product:hover a{
+    color: white;  
+}
 
 .form-general-bsave.hover, .form-general-bsave:hover {
     cursor: pointer;
@@ -2840,9 +2871,68 @@ height: 50px;
 
 .form-title h4{
     color:#1d2671;
-    text-align: center;;
+    text-align: center;
+    margin-top: 20px;
 }
-
+.form-head h1{
+    color:white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.report-label{
+    color:white;
+    font-weight: bold;
+    font-size:x-large ;
+}
+.report-input{
+    font-weight: bold;
+    color:black;
+}
+.form-label{
+    color: #5B2A70;
+    font-weight: bold;
+}
+.sidebar{
+    background-color:#12143d ;}
+.sidebar li span{
+    color: white;
+}
+.btn-primary{
+background-color: #b6045aba;
+width: 100px;
+}
+.navno{
+    background: linear-gradient(to right, #c33764,#1d2671);
+    height: 40px;
+    width: 100%;
+}
+.form-login{
+    background-color: rgb(255,255,255);
+    border: 5px solid #b2699a;
+    border-style: outset;
+    border-radius: 15px;
+    width: 40%;
+    height: 400px;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+.form-usuario{
+    background-color: rgb(255,255,255);
+    border: 5px solid rgb(185 152 197);
+    border-style: outset;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+.form-user-div{
+    margin: 10px;
+}
+.form-user-div .fields{
+    width: 5px;
+}
 @media screen and (max-width: 993px) {
     .form-general-bsave {
         width: 70%;
@@ -3361,14 +3451,13 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #b6045aba;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc
+    /* background-color: #0069d9;
+    border-color: #0062cc */
 }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -5591,13 +5680,14 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     color: #0056b3;
     text-decoration: none;
     background-color: #e9ecef;
-    border-color: #dee2e6
+    border-color: #34041c;
 }
 
 .page-link:focus {
     z-index: 2;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+    background-color: #e9ecef;
 }
 
 .page-item:first-child .page-link {

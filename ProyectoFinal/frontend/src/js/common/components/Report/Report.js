@@ -6,17 +6,19 @@ import { standardActions } from "../Utils/Grid/StandardActions";
 export default class Report extends Component {
     componentWillMount = () => {
         const { listar } = this.props;
-        console.log(this.props.data);
         listar();
     };
     render() {
         const { data, loader, listar, page } = this.props;
         return (
             <div>
-                <h1> REPORTE VENTAS </h1>
+                <div className="form-head ">
+                    <h1>Reporte Ventas </h1>
+                </div>
 
                 <ReportForm />
-
+                <br></br>
+                <br></br>
                 <Grid
                     data={data}
                     loading={loader}
@@ -43,6 +45,17 @@ export default class Report extends Component {
                         Descripcion Producto
                     </TableHeaderColumn>
                     <TableHeaderColumn dataField="total_sales" dataSort>
+                        Cantidad de ventas
+                    </TableHeaderColumn>
+                    <TableHeaderColumn
+                        dataField="total_SaleMo"
+                        dataSort
+                        dataFormat={(cell) => {
+                            if (cell) {
+                                return `Q${cell}`;
+                            }
+                        }}
+                    >
                         Total de ventas
                     </TableHeaderColumn>
                 </Grid>

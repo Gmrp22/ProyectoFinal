@@ -8,7 +8,7 @@ class Demo2 extends Component {
                 <span
                     className="text-uppercase page-subtitle">Escritorio ejemplo
                 </span>
-                <h3 className="page-title">Titulo secundario</h3>
+                <h1 className="page-title">Titulo secundario</h1>
             </div>
         );
     }

@@ -9,7 +9,7 @@ const ProductForm = (props) => {
             <form onSubmit={handleSubmit} className="form-general">
               <div className="form-title"> <h4>Informacion Producto</h4></div>
                 <div className="form-general-div">
-                    <label>Nombre Producto</label>
+                    <label className="form-label">Nombre Producto</label>
                     <Field
                         name="name"
                         label="name"
@@ -19,7 +19,7 @@ const ProductForm = (props) => {
                     />
                 </div>
                 <div className="form-general-div">
-                    <label>Precio Producto</label>
+                    <label className="form-label">Precio Producto</label>
                     <Field
                         name="price"
                         label="price"
@@ -29,7 +29,7 @@ const ProductForm = (props) => {
                     />
                 </div>
                 <div className="form-general-div">
-                    <label>Descripcion Producto</label>
+                    <label className="form-label">Descripcion Producto</label>
                     <Field
                         name="description"
                         label="description"

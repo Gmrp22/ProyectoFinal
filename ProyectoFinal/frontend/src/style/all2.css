@@ -341,12 +341,12 @@ pre {
 .form-control {
     height: auto;
     padding: .4375rem .75rem;
-    font-size: .8125rem;
+    font-size: .9125rem;
     line-height: 1.5;
-    color: #495057;
+    color: rgb(35 60 129);
     background-color: #fff;
     border: 1px solid #e1e5eb;
-    font-weight: 300;
+    font-weight: bold;
     will-change: border-color, box-shadow;
     border-radius: .25rem;
     box-shadow: none;
@@ -668,14 +668,13 @@ form label:hover, select.form-control:hover {
 
 .btn-primary {
     color: #fff;
-    border-color: #007bff;
-    background-color: #007bff;
+    background-color: #b6045aba;
     box-shadow: none
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #006fe6;
+    background-color: #4182b5;
     border-color: #006fe6;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .05), 0 4px 10px rgba(0, 123, 255, .25)
 }
@@ -867,13 +866,13 @@ form label:hover, select.form-control:hover {
 .btn-light {
     color: #212529;
     border-color: #fbfbfb;
-    background-color: #fbfbfb;
+    background-color:#12143d ;
     box-shadow: none
 }
 
 .btn-light:hover {
     color: #212529;
-    background-color: #eee;
+    background-color:#12143d ;
     border-color: #eee;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .05), 0 4px 10px hsla(0, 0%, 98.4%, .25)
 }
@@ -891,7 +890,7 @@ form label:hover, select.form-control:hover {
 
 .btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show > .btn-light.dropdown-toggle {
     color: #212529;
-    background-color: #eee;
+    background-color:#12143d ;
     border-color: #e2e2e2;
     background-image: none;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125) !important
@@ -2816,7 +2815,7 @@ i.material-icons {
 .page-link {
     padding: .5rem .75rem;
     line-height: 1.25;
-    color: #007bff;
+    color: #840f5b;
     background-color: #fff;
     border: none;
     margin: 0;
@@ -2851,8 +2850,8 @@ i.material-icons {
 }
 
 .page-item.active .page-link {
-    color: #fff;
-    background-color: #007bff;
+    color: #ff2f2f;
+    background-color: #79097db8;
     border-color: #007bff
 }
 
@@ -5247,7 +5246,8 @@ a.text-accent:focus, a.text-accent:hover {
     width: 100%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-top: none
+    border-top: none;
+    background-color:#12143d ;
 }
 
 .main-navbar .navbar .nav-link-icon i {
@@ -5262,7 +5262,7 @@ a.text-accent:focus, a.text-accent:hover {
     top: 0;
     position: fixed;
     height: 100vh;
-    background: #fff;
+    background-color:#12143d ;
     z-index: 107000;
     will-change: transform;
     transition: -webkit-transform .2s ease-in-out;
@@ -5344,12 +5344,12 @@ a.text-accent:focus, a.text-accent:hover {
 
 .main-sidebar .nav .nav-item.active, .main-sidebar .nav .nav-item .nav-link.active, .main-sidebar .nav .nav-item .nav-link:hover, .main-sidebar .nav .nav-item:hover {
     box-shadow: inset .1875rem 0 0 #007bff;
-    background-color: #fbfbfb;
-    color: #007bff
+    background-color: #edf3ff3d;
+    color: #007bff;
 }
 
 .main-sidebar .nav .nav-item.active i, .main-sidebar .nav .nav-item .nav-link.active i, .main-sidebar .nav .nav-item .nav-link:hover i, .main-sidebar .nav .nav-item:hover i {
-    color: #007bff
+    color: #580d2f;
 }
 
 .main-sidebar .nav--no-borders .nav-item .nav-link {

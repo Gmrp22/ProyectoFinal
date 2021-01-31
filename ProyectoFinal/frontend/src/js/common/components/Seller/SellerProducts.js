@@ -5,7 +5,6 @@ import { standardActions } from "../Utils/Grid/StandardActions";
 export default class SellerProducts extends Component {
     componentWillMount = () => {
         const { listar } = this.props;
-        console.log(this.props.data);
         listar();
     };
 
@@ -13,10 +12,10 @@ export default class SellerProducts extends Component {
         const { data, loader, listar, page } = this.props;
         return (
             <div>
-                <h1>Mis productos</h1>
-                <button>
-                    <a href="/#/seller/products/create">Nuevo Producto</a>
-                </button>
+                <div className="form-head">
+                    <h1>Mis Productos </h1>
+                </div>
+
                 <Grid
                     data={data}
                     loading={loader}
@@ -52,6 +51,10 @@ export default class SellerProducts extends Component {
                         Descripcion Producto
                     </TableHeaderColumn>
                 </Grid>
+
+                <button className="new_product">
+                    <a href="/#/seller/products/create">Nuevo Producto</a>
+                </button>
             </div>
         );
     }

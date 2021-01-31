@@ -5,14 +5,16 @@ import { standardActions } from "../Utils/Grid/StandardActions";
 export default class Catalogue extends Component {
     componentWillMount = () => {
         const { listar } = this.props;
-        console.log(this.props.data);
         listar();
     };
     render() {
         const { data, loader, listar, page } = this.props;
         return (
             <div>
-                <h4>Catalogo de Productos </h4>
+                <div className="form-head">
+                    <h1>Catalogo de Productos </h1>
+                </div>
+
                 <Grid
                     data={data}
                     loading={loader}

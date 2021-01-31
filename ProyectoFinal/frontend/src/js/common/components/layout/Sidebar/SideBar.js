@@ -12,7 +12,7 @@ class SideBar extends Component {
             <aside className={`main-sidebar px-0 col-12 col-md-3 col-lg-2 ${toggleOpen?'':'open'}`}>
                 <div className="main-navbar">
                     <nav
-                        className="align-items-stretch bg-white flex-md-nowrap border-bottom p-0 navbar navbar-light">
+                        className="align-items-stretch flex-md-nowrap border-bottom p-0 navbar navbar-light">
                         <a  href="#" className="w-100 mr-0 navbar-brand" >
                             <div className="d-table m-auto">
                                 <img id="main-logo"
@@ -27,7 +27,7 @@ class SideBar extends Component {
                         </a>
                     </nav>
                 </div>
-                <div className="nav-wrapper">
+                <div className="nav-wrapper sidebar">
                     <ul className="nav--no-borders flex-column nav">
                         <li className="nav-item">
                             <NavLink to="/" exact className="nav-link " activeClassName={'active'}>

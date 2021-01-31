@@ -22,15 +22,15 @@ class Navbar extends Component {
                 <div className="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
                     <div className="ml-3 input-group input-group-seamless" />
                 </div>
-                <ul className="border-left flex-row navbar-nav">
-                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                        <DropdownToggle color="light" caret className="nav-item-dropdown border-0">
+                <ul className="border-left flex-row navbar-nav ">
+                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
+                        <DropdownToggle color="light" caret className="nav-item-dropdown border-0 ">
                             <img className="user-avatar rounded-circle mr-3"
                                  src={(user.profile && user.profile.avatar) ? user.profile.avatar : defaultAvatar}
                                  alt="User Avatar" />
                             <span className="d-none d-md-inline-block">{user.first_name}</span>
                         </DropdownToggle>
-                        <DropdownMenu>
+                        <DropdownMenu className="sidebar">
                             <DropdownItem header>Header</DropdownItem>
                             <DropdownItem>
                                 <Link tabIndex="0"
@@ -44,20 +44,6 @@ class Navbar extends Component {
                                    to="/edit-user-profile">
                                     <i className="material-icons"></i>
                                     Edit Profile
-                                </Link>
-                            </DropdownItem>
-                            <DropdownItem>
-                                <Link tabIndex="0"
-                                   to="/file-manager-list">
-                                    <i className="material-icons"></i>
-                                    Files
-                                </Link>
-                            </DropdownItem>
-                            <DropdownItem>
-                                <Link tabIndex="0"
-                                   to="/transaction-history">
-                                    <i className="material-icons"></i>
-                                    Transactions
                                 </Link>
                             </DropdownItem>
                             <DropdownItem divider />
