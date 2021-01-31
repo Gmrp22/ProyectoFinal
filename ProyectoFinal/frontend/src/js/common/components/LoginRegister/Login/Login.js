@@ -22,14 +22,16 @@ class Login extends Component {
         return (
             <div className="blue-gradient-bg">
                 <div className="d-flex flex-column align-items-center pt-3 bienvenida">
-                    <h1 className="text-center">Bienvenido A Compras De Producto</h1>
-                   
+                    <div className="form-head">
+                    <h1>Bienvenido A Compras De Producto</h1>
+                </div>
                 </div>
                 <br />
                 <div className="login-wrapper ">
                     <div className=" col-lg-3 col-md-4 col-11 form-login">
                         
                         <LoadMask loading={loader} light>
+                            <br></br>
                             <LoginForm onSubmit={onSubmit} />
                             <br></br>
                             <br></br>

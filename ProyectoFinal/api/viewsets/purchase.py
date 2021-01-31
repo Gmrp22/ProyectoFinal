@@ -41,7 +41,8 @@ class PurchaseViewSet(viewsets.ModelViewSet):
                     purchase = Purchase.objects.create(
                         buyer = User.objects.get(pk = self.request.user.id),
                         product = product,
-                        nobuyer = "Comprado por usuario"
+                        nobuyer = "Comprado por usuario",
+                        price_buy = product.price 
                         )
                 else:
                     purchase = Purchase.objects.create(
@@ -49,7 +50,8 @@ class PurchaseViewSet(viewsets.ModelViewSet):
 
                 sale = Sale.objects.create(
                 seller = seller,
-                product = product
+                product = product,
+                price_buy = product.price
                 )
                 contexto = {'Exito': 'Creacion de compra'}
                 return Response(contexto, status=status.HTTP_201_CREATED)

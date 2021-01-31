@@ -34,7 +34,7 @@ class SideBar extends Component {
                                 <div className="d-inline-block item-icon-wrapper">
                                     <i className="material-icons">edit</i>
                                 </div>
-                                <span>Home</span>
+                                <span>Inicio</span>
                             </NavLink>
                         </li>
                         {/* <li className="nav-item">
@@ -125,7 +125,7 @@ class SideBar extends Component {
                                 <div className="d-inline-block item-icon-wrapper">
                                     <i className="material-icons">lock</i>
                                 </div>
-                                <span>Log Out</span>
+                                <span>Cerrar sesion</span>
                             </Link>
                         </li>
                         

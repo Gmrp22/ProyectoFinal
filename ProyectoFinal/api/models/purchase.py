@@ -7,3 +7,4 @@ class Purchase(models.Model):
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='purchase', blank=True, null = True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
     nobuyer = models.CharField(default='Comprador anonimo', max_length=50)
+    price_buy = models.FloatField(default=0)

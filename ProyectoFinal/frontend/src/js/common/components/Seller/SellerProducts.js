@@ -9,7 +9,7 @@ export default class SellerProducts extends Component {
     };
 
     render() {
-        const { data, loader, listar, page } = this.props;
+        const { data, loader, listar, page, eliminar } = this.props;
         return (
             <div>
                 <div className="form-head">
@@ -31,6 +31,7 @@ export default class SellerProducts extends Component {
                         dataFormat={standardActions({
                             editar: "products",
                             ver: "products",
+                            eliminar
                         })}
                     ></TableHeaderColumn>
                     <TableHeaderColumn isKey dataField="name" dataSort>
@@ -50,6 +51,7 @@ export default class SellerProducts extends Component {
                     <TableHeaderColumn dataField="description" dataSort>
                         Descripcion Producto
                     </TableHeaderColumn>
+                    
                 </Grid>
 
                 <button className="new_product">

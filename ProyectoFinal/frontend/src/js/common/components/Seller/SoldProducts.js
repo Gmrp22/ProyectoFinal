@@ -44,11 +44,11 @@ export default class SoldProducts extends Component {
                         Nombre Producto
                     </TableHeaderColumn>
                     <TableHeaderColumn
-                        dataField="product"
+                        dataField="price_buy"
                         dataSort
                         dataFormat={(cell) => {
                             if (cell) {
-                                return `Q${cell.price}`;
+                                return `Q${cell}`;
                             }
                         }}
                     >

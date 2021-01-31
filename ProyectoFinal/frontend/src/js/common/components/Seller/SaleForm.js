@@ -19,9 +19,9 @@ const SaleForm = (props) => {
                     />
                 </div>
                 <div className="form-general-div">
-                    <label className="form-label">Precio Producto</label>
+                    <label className="form-label">Precio De Venta Producto</label>
                     <Field
-                        name="product.price"
+                        name="price_buy"
                         label="price"
                         type="number"
                         component={renderCurrency}

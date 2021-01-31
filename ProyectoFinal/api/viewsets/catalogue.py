@@ -21,6 +21,6 @@ class CatalogueViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def list(self, request):
-        data = Product.objects.exclude(seller = request.user.id)
+        data = Product.objects.exclude(seller = request.user.id).filter(state = "En Venta")
         serializer = ProductListSerializer(data, many = True)
         return Response({'results' : serializer.data})

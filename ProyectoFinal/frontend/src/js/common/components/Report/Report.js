@@ -39,10 +39,10 @@ export default class Report extends Component {
                             }
                         }}
                     >
-                        Precio Producto
+                        Precio Actual Producto
                     </TableHeaderColumn>
-                    <TableHeaderColumn dataField="description" dataSort>
-                        Descripcion Producto
+                    <TableHeaderColumn dataField="state" dataSort>
+                        Estado
                     </TableHeaderColumn>
                     <TableHeaderColumn dataField="total_sales" dataSort>
                         Cantidad de ventas

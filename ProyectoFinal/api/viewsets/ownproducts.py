@@ -22,6 +22,6 @@ class OwnProductsViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def list(self, request):
-        data = Product.objects.filter(seller = request.user.id)
+        data = Product.objects.filter(seller = request.user.id).exclude(state = "Terminado")
         serializer = ProductListSerializer(data, many = True)
         return Response({'results' : serializer.data})

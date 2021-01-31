@@ -54,8 +54,16 @@ const FormProduct = (props) => {
                         </button>
                     </div>
 
-                    {ver ? (
-                        <div></div>
+                    {isActualizar ? (
+                        location.pathname.includes("editar") ? (
+                            <div className="form-general-save">
+                                <button className="form-general-bsave    ">
+                                    Guardar
+                                </button>
+                            </div>
+                        ) : (
+                            <div></div>
+                        )
                     ) : (
                         <div className="form-general-save">
                             <button className="form-general-bsave    ">

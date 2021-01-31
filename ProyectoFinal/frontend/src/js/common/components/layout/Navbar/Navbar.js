@@ -31,21 +31,15 @@ class Navbar extends Component {
                             <span className="d-none d-md-inline-block">{user.first_name}</span>
                         </DropdownToggle>
                         <DropdownMenu className="sidebar">
-                            <DropdownItem header>Header</DropdownItem>
+                        
                             <DropdownItem>
                                 <Link tabIndex="0"
                                    to="/user-profile">
                                     <i className="material-icons"></i>
-                                    Profile
+                                    Perfil
                                 </Link>
                             </DropdownItem>
-                            <DropdownItem>
-                                <Link tabIndex="0"
-                                   to="/edit-user-profile">
-                                    <i className="material-icons"></i>
-                                    Edit Profile
-                                </Link>
-                            </DropdownItem>
+
                             <DropdownItem divider />
                             <DropdownItem>
                                 <a tabIndex="0" className="text-danger" onClick={logOut} href="/">

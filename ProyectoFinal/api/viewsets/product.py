@@ -32,4 +32,9 @@ class ProductViewSet(viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+    def destroy(self, request, pk):
+        print("--------------------")
+        product = Product.objects.get(pk = pk)
+        product.state = 'Terminado'
+        product.save()
+        return Response(status=status.HTTP_204_NO_CONTENT)

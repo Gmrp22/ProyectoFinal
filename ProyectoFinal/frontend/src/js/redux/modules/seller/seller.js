@@ -147,39 +147,20 @@ const actualizar = () => (dispatch, getStore) => {
         });
 };
 
-// const eliminar = (id) => (dispatch, getStore) => {
-//     api.eliminar(`administrative_expenses_header/${id}`).then((response) => {
+const eliminar = (id) => (dispatch, getStore) => {
+    api.eliminar(`product/${id}`).then((response) => {
 
-//         NotificationManager.success('Gasto Administrativo eliminado correctamente', 'Éxito', 1000);
-//         dispatch(listar());
-//     }).catch((error) => {
-//         NotificationManager.error(error.detail, 'ERROR', 0);
-//     }).finally(() => {
+        NotificationManager.success('Producto terminado', 'Éxito', 1000);
+        dispatch(listar());
+    }).catch((error) => {
+        NotificationManager.error(error.detail, 'ERROR', 0);
+    }).finally(() => {
 
-//     });
-// }
+    });
+}
 
-const searchChange = (search) => (dispatch) => {
-    dispatch(setSearch(search));
-    dispatch(listar());
-};
 
-const getTipoProyecto = () => (dispatch) => {
-    let tipoProyecto = [];
 
-    return api
-        .get("type_project")
-        .then((response) => {
-            tipoProyecto = response.results.map((proyecto) => ({
-                value: proyecto.id,
-                label: proyecto.name_project,
-            }));
-            return tipoProyecto;
-        })
-        .catch((err) => {
-            return tipoProyecto;
-        });
-};
 
 export const actions = {
     onSubmit,
@@ -188,6 +169,7 @@ export const actions = {
     listar,
     listarsold,
     detalleSale,
+    eliminar,
 };
 
 // -----------------------------------

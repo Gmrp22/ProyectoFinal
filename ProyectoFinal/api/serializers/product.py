@@ -10,12 +10,12 @@ class ProductSerializer(serializers.ModelSerializer):
 class ProductListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields=['name', 'price', 'description', 'seller' , 'id']    
+        fields=['name', 'price', 'description', 'seller' , 'id', 'state']    
 
 class ProductSaleReportSerializer(serializers.ModelSerializer):
     total_sales= serializers.FloatField(default=0)
     total_SaleMo = serializers.FloatField(default=0)
     class Meta:
         model = Product
-        fields=['name', 'price', 'description', 'seller', 'total_sales', 'total_SaleMo']    
+        fields=['name', 'price', 'description', 'seller', 'total_sales', 'total_SaleMo', 'state']    
 
