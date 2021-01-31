@@ -46,16 +46,16 @@ class PrivateRouteBase extends Component {
                     isAuthenticated ? (
                         (isAuthenticated === true) ? (<div>
                             <SiderBar toggleOpen={this.state.toggleOpen} navToggle={this.navToggle} logOut={logOut} auth={true} />
-                            <main className="main-content p-0 col-sm-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2">
-                                <div className="main-navbar bg-white sticky-top">
-                                    <div className="p-0 container">
+                            <main className="main-content p-0 col-sm-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2 div-princiapal ">
+                                <div className="main-navbar  sticky-top sidebar">
+                                    <div className="p-0 container sidebar">
                                         <Navbar navToggle={this.navToggle} logOut={logOut} user={me} />
                                     </div>
                                 </div>
-                                <div className="main-content-container px-4 container-fluid">
+                                <div className="main-content-container px-4 container-fluid div-princiapal">
                                     <Component {...props} />
                                 </div>
-                                <Footer />
+                               
                             </main>
                         </div>) : (
                             <VerifyLogin />
@@ -65,10 +65,10 @@ class PrivateRouteBase extends Component {
 
 <div>
                             <SiderBar toggleOpen={this.state.toggleOpen} navToggle={this.navToggle} logOut={logOut} auth={false} />
-                            <main className="main-content p-0 col-sm-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2">
-                                <div className="main-navbar bg-white sticky-top">
-                                    <div className="p-0 container">
-                                        {/* <Navbar navToggle={this.navToggle} logOut={logOut} user={me} /> */}
+                            <main className="main-content p-0 col-sm-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2 div-princiapal">
+                                <div className="main-navbar ">
+                                    <div className="p-0 container ">
+                                    <nav className="navno"></nav>
                                     </div>
                                 </div>
                                 <div className="main-content-container px-4 container-fluid">

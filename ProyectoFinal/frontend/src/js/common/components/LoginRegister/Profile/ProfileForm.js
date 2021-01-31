@@ -11,36 +11,37 @@ const genders = [
 const ProfileForm = (props) => {
     const { handleSubmit, me, setAvatar } = props;
     return (
-            <form action="" onSubmit={handleSubmit} className="py-4">
-                <h2>PERFIL</h2>
-                <div className="mb-4 card card-small">
-                    <div className="border-bottom card-header"><h6 className="m-0">{me.first_name} {me.last_name}</h6></div>
+            <form action="" onSubmit={handleSubmit} className="py-4 ">
+                  <div className="form-head">
+                    <h1>Perfil de usuario </h1>
+                </div>
+                <div className=" form-usuario">
+                    <div className="border-bottom "><h6 className="m-0">{me.first_name} {me.last_name}</h6></div>
                     <div className="p-0 pt-3 d-flex flex-column flex-md-row">
-                        <div className="form-group has-feedback flex-1 mx-3">
-                            <label htmlFor="avatar">Avatar</label>
-                            <Field photo={me.profile && me.profile.avatar ? me.profile.avatar : null} setFile={setAvatar} name="avatar" component={renderFilePicker} />
-                        </div>
                         <div className="d-flex flex-column flex-1 mx-3">
                             <div className="form-group has-feedback">
-                                <label htmlFor="username">Username</label>
+                            <div className="form-user-div">
+                                <label className="form-label" htmlFor="username">Username</label>
                                 <Field name="username" placeholder="Username" component={renderField} type="text" className="form-control" />
-                            </div>
+                            </div></div>
 
                             <div className="form-group has-feedback">
-                                <label htmlFor="first_name">Nombre</label>
+                            <div className="form-user-div">
+                                <label className="form-label" htmlFor="first_name">Nombre</label>
                                 <Field name="first_name" placeholder="Nombre" component={renderField} type="text" className="form-control" />
-                            </div>
+                            </div></div>
 
                             <div className="form-group has-feedback">
-                                <label htmlFor="last_name">Apellido</label>
+                            <div className="form-user-div">
+                                <label className="form-label" htmlFor="last_name">Apellido</label>
                                 <Field name="last_name" placeholder="Nombre" component={renderField} type="text" className="form-control" />
-                            </div>
+                            </div></div>
                         </div>
                     </div>
                     <div className="p-0 pt-3 d-flex flex-column flex-md-row">
                         <div className="form-group has-feedback flex-1 mx-3">
                             <div className="form-group has-feedback">
-                                <label htmlFor="profile.phone">Teléfono</label>
+                                <label className="form-label" htmlFor="profile.phone">Teléfono</label>
                                 <Field
                                     numberFormat={"+(502) ####-####"}
                                     name="profile.phone"
@@ -50,13 +51,13 @@ const ProfileForm = (props) => {
                                 />
                             </div>
                             <div className="form-group has-feedback">
-                                <label htmlFor="profile.gender">Género</label>
+                                <label className="form-label" htmlFor="profile.gender">Género</label>
                                 <Field name="profile.gender" placeholder="Género" component={SelectField} options={genders} className="form-control" />
                             </div>
                         </div>
                         <div className="form-group has-feedback flex-1 mx-3">
                             <div className="form-group has-feedback">
-                                <label htmlFor="profile.address">Dirección</label>
+                                <label className="form-label" htmlFor="profile.address">Dirección</label>
                                 <Field name="profile.address" placeholder="Dirección" component={renderField} type="text" className="form-control" />
                             </div>
                         </div>

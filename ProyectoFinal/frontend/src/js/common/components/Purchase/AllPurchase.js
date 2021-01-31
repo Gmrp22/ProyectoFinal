@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import Grid from "../Utils/Grid";
 import { standardActions } from "../Utils/Grid/StandardActions";
-export default class AllPurchase extends Component{
+export default class AllPurchase extends Component {
     componentWillMount = () => {
         const { listar } = this.props;
-        console.log(this.props.data);
         listar();
     };
 
-    render(){
+    render() {
         const { data, loader, listar, page } = this.props;
-        return(<div>
-            <h1>Mis Compras</h1>
-            <Grid
+        return (
+            <div>
+                <div className="form-head">
+                    <h1>Mis Compras </h1>
+                </div>
+                <Grid
                     data={data}
                     loading={loader}
                     onPageChange={listar}
@@ -52,6 +54,7 @@ export default class AllPurchase extends Component{
                         Precio Producto
                     </TableHeaderColumn>
                 </Grid>
-        </div>)
+            </div>
+        );
     }
 }

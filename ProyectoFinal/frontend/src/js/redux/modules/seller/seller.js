@@ -95,7 +95,7 @@ const onSubmit = () => (dispatch, getStore) => {
         })
         .catch(() => {
             NotificationManager.error("Error de creacion", "ERROR", 3000);
-            console.log(values);
+
         });
 };
 
@@ -104,7 +104,6 @@ const listar = (page = 1) => (dispatch) => {
     const params = { page };
     api.get("ownproducts", params)
         .then((response) => {
-            console.log(response)
             dispatch(setData(response));
             dispatch(setPage(page));
         })
@@ -118,7 +117,6 @@ const listarsold = (page = 1) => (dispatch) => {
     const params = { page };
     api.get("sale", params)
         .then((response) => {
-            console.log(response)
             dispatch(setData(response));
             dispatch(setPage(page));
         })

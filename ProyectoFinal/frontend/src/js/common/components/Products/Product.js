@@ -14,7 +14,7 @@ export default class Product extends Component{
        
       
         return(<div>
-            <h4>Product</h4>
+            
             <ProductForm onSubmit={onSubmit}
                 ver={location.pathname.includes('ver') && true}
                 />

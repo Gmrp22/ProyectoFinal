@@ -11,7 +11,7 @@ export default class Sale extends Component{
     };
     render(){
         return(<div>
-            <h4>Venta</h4>
+           
             <SaleForm />
         </div>)
     }

@@ -69,7 +69,6 @@ const detalle = (id) => (dispatch) => {
 
 const onSubmit = () => (dispatch, getStore) => {
     const dataForm = getStore().form.createPurchase.values;
-    console.log(dataForm)
     api.post("purchase", dataForm)
         .then((response) => {
             NotificationManager.success(
@@ -81,7 +80,6 @@ const onSubmit = () => (dispatch, getStore) => {
         })
         .catch(() => {
             NotificationManager.error("Error de creacion", "ERROR", 3000);
-            console.log(values);
         });
 };
 
@@ -90,7 +88,6 @@ const listar = (page = 1) => (dispatch) => {
     const params = { page };
     api.get("catalogue", params)
         .then((response) => {
-            console.log(response)
             dispatch(setData(response));
             dispatch(setPage(page));
         })

@@ -7,19 +7,20 @@ const ReportForm = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>Total de ventas</label>
+                <label className="report-label">Total de ventas</label>
                 <Field
                     name="sales_total"
                     label="name"
                     type="text"
                     component={renderCurrency}
-                  
+                    className="report-input"
                 />
-                <label>Precio promedio de catalogo</label>
+                <label className="report-label">Precio promedio de catalogo</label>
                 <Field
                     name="avg_price"
                     label="avg_price"
                     type="number"
+                    className="report-input"
                     component={renderCurrency}
                 
                 />

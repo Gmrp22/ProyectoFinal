@@ -22,17 +22,19 @@ class Login extends Component {
         return (
             <div className="blue-gradient-bg">
                 <div className="d-flex flex-column align-items-center pt-3 bienvenida">
-                    <h1 className="text-center">Bienvenido a Compras De Producto</h1>
+                    <h1 className="text-center">Bienvenido A Compras De Producto</h1>
                    
                 </div>
                 <br />
-                <div className="login-wrapper">
-                    <div className="card card-login col-lg-3 col-md-4 col-11">
-                        <h5 className="text-center pv">Log In</h5>
+                <div className="login-wrapper ">
+                    <div className=" col-lg-3 col-md-4 col-11 form-login">
+                        
                         <LoadMask loading={loader} light>
                             <LoginForm onSubmit={onSubmit} />
-                            <span>¿No tienes cuenta?&nbsp;<Link to="/registro">Registrate aquí</Link></span>
                             <br></br>
+                            <br></br>
+                            <span>¿No tienes cuenta?&nbsp;<Link to="/registro">Registrate aquí</Link></span>
+                            <br></br><br></br>
                             <span>¿Deseas comprar sin cuenta?&nbsp;<Link to="/product/catalogue">Compra</Link></span>
                         </LoadMask>
 

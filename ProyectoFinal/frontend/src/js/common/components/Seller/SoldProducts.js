@@ -5,7 +5,6 @@ import { standardActions } from "../Utils/Grid/StandardActions";
 export default class SoldProducts extends Component {
     componentWillMount = () => {
         const { listarsold } = this.props;
-        console.log(this.props.data);
         listarsold();
     };
 
@@ -13,7 +12,9 @@ export default class SoldProducts extends Component {
         const { data, loader, listarsold, page } = this.props;
         return (
             <div>
-                <h1>Ventas de mis productos</h1>
+                <div className="form-head">
+                    <h1>Productos Vendidos </h1>
+                </div>
                 <Grid
                     data={data}
                     loading={loader}
