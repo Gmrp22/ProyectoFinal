@@ -2,6 +2,7 @@ from django.db import models
 from .seller import Seller
 from django.contrib.auth.models import User
 class Product(models.Model):
+    """Product model"""
     name = models.CharField(max_length = 100)
     price = models.FloatField()
     state = models.CharField(default = "En Venta", max_length = 100)

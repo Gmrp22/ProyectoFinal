@@ -3,6 +3,7 @@ import Grid from "../Utils/Grid";
 import { standardActions } from "../Utils/Grid/StandardActions";
 
 export default class SoldProducts extends Component {
+    //Componente con tabla de ventas de usuario
     componentWillMount = () => {
         const { listarsold } = this.props;
         listarsold();

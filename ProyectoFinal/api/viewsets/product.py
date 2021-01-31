@@ -25,6 +25,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def create(self,request):
+        """Creacion de producto"""
         serializer = ProductSerializer(data=request.data)
         if serializer.is_valid():
             serializer.validated_data['seller'] = self.request.user
@@ -33,7 +34,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def destroy(self, request, pk):
-        print("--------------------")
+        """No elimina un producto, solo cambia su estado"""
         product = Product.objects.get(pk = pk)
         product.state = 'Terminado'
         product.save()

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import ReportForm from "./ReportForm";
 import Grid from "../Utils/Grid";
-import { standardActions } from "../Utils/Grid/StandardActions";
 export default class Report extends Component {
+    //Componente con form de datos de venta de usuario 
+    //Compoente con tabla de datos de venta de cada producto del usuario
     componentWillMount = () => {
         const { listar } = this.props;
         listar();

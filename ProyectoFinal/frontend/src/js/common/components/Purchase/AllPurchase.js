@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Grid from "../Utils/Grid";
 import { standardActions } from "../Utils/Grid/StandardActions";
 export default class AllPurchase extends Component {
+    //Componente con tabla de compras realizadas
     componentWillMount = () => {
         const { listar } = this.props;
         listar();

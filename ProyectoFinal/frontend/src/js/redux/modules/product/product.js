@@ -5,13 +5,12 @@ import { NotificationManager } from "react-notifications";
 import { handleActions } from "redux-actions";
 import { array } from "validate-redux-form";
 
-const LOADER = "ADMINMODULE_LOADER";
-const DATA = "ADMINMODULET_DATA";
-const ITEM = "ADMINMODULE_ITEM";
-const PAGE = "ADMINMODULE_PAGE";
-const ORDERING = "ADMINMODULE_ORDERING";
-const SEARCH = "ADMINMODULE_SEARCH";
-const STEP = "ADMINMODULE_STEP";
+const LOADER = "LOADER";
+const DATA = "DATA";
+const ITEM = "ITEM";
+const PAGE = "PAGE";
+const ORDERING = "ORDERING";
+const SEARCH = "SEARCH";
 
 // -----------------------------------
 // Pure Actions
@@ -42,10 +41,7 @@ const setSearch = (search) => ({
     type: SEARCH,
     search,
 });
-const setStep = (step) => ({
-    type: STEP,
-    step,
-});
+
 
 // -----------------------------------
 // Actions
@@ -119,22 +115,8 @@ const actualizar = () => (dispatch, getStore) => {
         });
 };
 
-// const eliminar = (id) => (dispatch, getStore) => {
-//     api.eliminar(`administrative_expenses_header/${id}`).then((response) => {
 
-//         NotificationManager.success('Gasto Administrativo eliminado correctamente', 'Éxito', 1000);
-//         dispatch(listar());
-//     }).catch((error) => {
-//         NotificationManager.error(error.detail, 'ERROR', 0);
-//     }).finally(() => {
 
-//     });
-// }
-
-const searchChange = (search) => (dispatch) => {
-    dispatch(setSearch(search));
-    dispatch(listar());
-};
 
 export const actions = {
     onSubmit,
@@ -182,12 +164,6 @@ const reducers = {
         return {
             ...state,
             search,
-        };
-    },
-    [STEP]: (state, { step }) => {
-        return {
-            ...state,
-            step,
         };
     },
 };

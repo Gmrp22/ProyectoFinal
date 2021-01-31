@@ -23,14 +23,14 @@ class UserViewset(viewsets.ModelViewSet):
     ordering_fields = ("username", "first_name")
 
     def get_serializer_class(self):
-        """Define serializer for API"""
+        """Define serializer"""
         if self.action == 'list' or self.action == 'retrieve':
             return UserReadSerializer
         else:
             return UserSerializer
 
     def get_permissions(self):
-        """" Define permisos para este recurso """
+        """" Define permisos """
         if self.action == "create" or self.action == "token":
             permission_classes = [AllowAny]
         else:

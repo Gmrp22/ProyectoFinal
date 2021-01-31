@@ -1,7 +1,9 @@
-import React , {Component} from 'react';
+import React, { Component } from "react";
 import ProductForm from "./ProductForm";
 
-export default class Product extends Component{
+export default class Product extends Component {
+    // Componente que contiene el form de producto
+
     componentWillMount = () => {
         const { match, detalle } = this.props;
         if (match.params.id) {
@@ -9,15 +11,16 @@ export default class Product extends Component{
             detalle(id);
         }
     };
-    render(){
-        const { onSubmit, match, location, actualizar } = this.props;
-       
-      
-        return(<div>
-            
-            <ProductForm onSubmit={onSubmit}
-                ver={location.pathname.includes('ver') && true}
+    render() {
+        const { onSubmit, location } = this.props;
+
+        return (
+            <div>
+                <ProductForm
+                    onSubmit={onSubmit}
+                    ver={location.pathname.includes("ver") && true}
                 />
-        </div>)
+            </div>
+        );
     }
 }

@@ -24,6 +24,7 @@ class SaleViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def list(self, request):
+        """Lista de ventas"""
         data = Sale.objects.filter(seller = request.user.id)
         serializer = SaleSerializer(data, many = True)
         return Response({'results' : serializer.data})

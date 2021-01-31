@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
-import { validate, validators } from "validate-redux-form";
 import { renderField, renderCurrency } from "../Utils/renderField/renderField";
 const SaleForm = (props) => {
+    //Formulario con informacion de venta
     const { handleSubmit, ver } = props;
     return (
         <div>

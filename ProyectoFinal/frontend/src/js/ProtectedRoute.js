@@ -3,9 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut, getMe } from "./redux/modules/cuenta/login";
 
-// maquetado base
 import SiderBar from './common/components/layout/Sidebar/SideBar';
-import Footer from './common/components/layout/Footer/Footer';
 
 import Navbar from "./common/components/layout/Navbar/Navbar";
 import { VerifyLogin } from "./common/components/layout";
@@ -74,7 +72,7 @@ class PrivateRouteBase extends Component {
                                 <div className="main-content-container px-4 container-fluid">
                                     <Component {...props} />
                                 </div>
-                                {/* <Footer /> */}
+                             
                             </main>
                         </div>
 
@@ -82,13 +80,7 @@ class PrivateRouteBase extends Component {
 
 
 
-                        
-                        // <Redirect
-                        //     to={{
-                        //         pathname: "/login",
-                        //         state: { from: props.location }
-                        //     }}
-                        // />
+                   
                     )
                 }
             />

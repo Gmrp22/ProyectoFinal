@@ -3,6 +3,7 @@ import Grid from "../Utils/Grid";
 import { standardActions } from "../Utils/Grid/StandardActions";
 
 export default class Catalogue extends Component {
+    //Componente que contiene la tabla de productos del catalogo
     componentWillMount = () => {
         const { listar } = this.props;
         listar();

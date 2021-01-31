@@ -28,6 +28,11 @@ class PurchaseViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def create(self, request):
+        """Creacion de productos
+        Caso #1: Si el dueño del producto quiere comprarlo, no se le permitira
+        Caso #2: Si se inicio sesion se establece que se compro por el usuario
+        Caso #3:Si no se inicia sesion, se establece que es una compra anonima
+        """
         try:
             data = request.data
             product = Product.objects.get(pk=data.get('id'))

@@ -8,6 +8,7 @@ from api.models.product import Product
 from api.serializers.product import ProductSerializer, ProductListSerializer
 
 class CatalogueViewSet(viewsets.ModelViewSet):
+    """Viewset product catalogue"""
     queryset = Product.objects.all()
     def get_serializer_class(self):
         """Define serializer"""
@@ -21,6 +22,7 @@ class CatalogueViewSet(viewsets.ModelViewSet):
         return [permission() for permission in permission_classes]
 
     def list(self, request):
+        """"Regresara solo productos que el usuario puede comprar"""
         data = Product.objects.exclude(seller = request.user.id).filter(state = "En Venta")
         serializer = ProductListSerializer(data, many = True)
         return Response({'results' : serializer.data})

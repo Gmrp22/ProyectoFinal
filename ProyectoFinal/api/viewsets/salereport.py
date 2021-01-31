@@ -14,26 +14,28 @@ from api.serializers.product import  ProductSaleReportSerializer
 #Permiso
 from api.authentication.salereport import IsOwner
 class SaleReport(viewsets.GenericViewSet):
+    """ViewSet para reportes"""
     queryset = Sale.objects.all()
     serializer_class = SaleSerializer
     permission_classes = [IsOwner, IsAuthenticated]
 
     @action(detail =False, methods=['get'])
     def reports(self, request):
+        """Devuelve valores para reportes
+        1:Total de ventas global
+        2:Promedio de los precios manejados en su catálogo de productos
+        3:Total de ventas por producto"""
         user = self.request.user
         #Global sale and average price
+        
         sales_total = User.objects.annotate(sales_total = Sum('sells__price_buy')).filter(id = self.request.user.id)
         avg_price= User.objects.filter(id = self.request.user.id).aggregate(Avg('seller__price'))
         for s in sales_total:
             s.avg_price = avg_price['seller__price__avg']
+
         #Sale by product
         total_sales = Product.objects.annotate(
         total_sales= Count('product_sale__id'), total_SaleMo = Sum('product_sale__price_buy')).filter(seller = self.request.user.id)
-
-        # for ts in total_sales:
-        #     total_SaleMo = ts.total_sales * ts.price
-        #     ts.total_SaleMo = total_SaleMo
-        
         contexto = {'Report': UserReportSerializer(sales_total, many=True).data,
         'Product_Sales' : ProductSaleReportSerializer(total_sales, many=True).data, 
 

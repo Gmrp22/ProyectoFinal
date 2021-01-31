@@ -41,6 +41,7 @@ class UserReadSerializer(serializers.ModelSerializer):
 
 
 class UserReportSerializer(serializers.ModelSerializer):
+    """Serializer para reporte de ventas por usuario"""
     sales_total = serializers.FloatField(default=0)
     avg_price = serializers.FloatField(default=0)
 

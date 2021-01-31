@@ -4,6 +4,7 @@ import { validate, validators } from "validate-redux-form";
 import { renderField, renderCurrency } from "../Utils/renderField/renderField";
 
 const FormProduct = (props) => {
+    //Formulario para creacion de producto
     const { handleSubmit, ver, isActualizar, location } = props;
     return (
         <div>

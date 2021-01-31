@@ -35,9 +35,6 @@ module.exports = (
                 <ProtectedRoute exact path="/" component={Demo} />
                 <ProtectedRoute exact path="/page2" component={Examples} />
                 <ProtectedRoute exact path="/user-profile" component={Profile} />
-                <ProtectedRoute exact path="/grids" component={Grids} />
-                <ProtectedRoute exact path="/notifications" component={Notificaciones} />
-                <ProtectedRoute exact path="/tabs" component={ExampleTabs} />
                 {/* SELLER */}
                 <ProtectedRoute exact path="/seller/products/create" component={ConnectionSeller.FormProduct} />
                 <ProtectedRoute exact path="/seller/products/:id/" component={ConnectionSeller.FormProduct} />
